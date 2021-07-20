@@ -4,7 +4,6 @@ import {
   addWhitelistedNativeProps,
   addWhitelistedUIProps,
 } from './ConfigHelper';
-import * as reanimated1 from './reanimated1';
 
 const Animated = {
   // components
@@ -16,10 +15,7 @@ const Animated = {
   // configuration
   addWhitelistedNativeProps,
   addWhitelistedUIProps,
-  // reanimated 1
-  ...reanimated1,
 };
 
 export * from './reanimated2';
-export * from './reanimated1';
 export default Animated;

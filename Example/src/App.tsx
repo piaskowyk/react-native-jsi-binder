@@ -17,8 +17,6 @@ import {
   CustomLayoutAnimationScreen,
 } from './LayoutReanimation';
 
-import Reanimated1 from '../reanimated1/App';
-
 import ExtrapolationExample from './ExtrapolationExample';
 import AnimatedStyleUpdateExample from './AnimatedStyleUpdateExample';
 import WobbleExample from './WobbleExample';
@@ -154,7 +152,6 @@ function MainScreen({ navigation, setUseRea2 }: MainScreenProps) {
         />
       )}
       renderScrollComponent={(props) => <ScrollView {...props} />}
-      ListFooterComponent={() => <LaunchReanimated1 setUseRea2={setUseRea2} />}
     />
   );
 }
@@ -179,21 +176,6 @@ export function MainScreenItem({
     <RectButton style={styles.button} onPress={() => onPressItem(item)}>
       <Text style={styles.buttonText}>{screens[key].title || key}</Text>
     </RectButton>
-  );
-}
-
-function LaunchReanimated1({
-  setUseRea2,
-}: {
-  setUseRea2: (useRea2: boolean) => void;
-}) {
-  return (
-    <>
-      <ItemSeparator />
-      <RectButton style={styles.button} onPress={() => setUseRea2?.(false)}>
-        <Text style={styles.buttonText}>👵 Reanimated 1.x Examples</Text>
-      </RectButton>
-    </>
   );
 }
 
@@ -222,7 +204,7 @@ function App(): React.ReactElement {
 
   return (
     <NavigationContainer>
-      {useRea2 ? Reanimated2(setUseRea2) : Reanimated1(setUseRea2)}
+      {Reanimated2(setUseRea2)}
     </NavigationContainer>
   );
 }

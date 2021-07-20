@@ -1,8 +1,6 @@
-<img src="https://user-images.githubusercontent.com/16062886/117443145-ff868480-af37-11eb-8680-648bccf0d0ce.png" alt="React Native Reanimated by Software Mansion" width="100%">
+# react-native-jsi-binder
 
-### react-native-jsi-binder
-
-Library based on [Reanimated](https://github.com/software-mansion/react-native-reanimated) base code
+Library based on [Reanimated](https://github.com/software-mansion/react-native-reanimated) base code.
 
 ## License
 
